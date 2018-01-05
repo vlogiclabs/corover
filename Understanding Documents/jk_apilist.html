@@ -1,0 +1,1680 @@
+<html>
+
+<body>
+
+<style type="text/css">
+
+.tg  
+{
+border-collapse:collapse;border-spacing:0;border-color:#aabcfe;
+}
+.tg td
+{
+font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aabcfe;color:#669;background-color:#e8edff;
+}
+.tg th
+{
+font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aabcfe;color:#039;background-color:#b9c9fe;
+}
+.tg .tg-yw4l
+{
+vertical-align:top
+}
+.tg-yw4l 
+{
+width:100%;}
+</style>
+<h1 style="text-align:center;color:red">API LIST OF J & K Tourism APP</h1>
+
+1. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>register</b></th>
+  </tr>
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/register.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">register</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">name,email,address,country_code,mobile,designation,roomno,gender,password,user_type,image,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">status,message,id,is_verified</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+    <td class="tg-yw4l">name:shaminder
+email:shaminder@gmail.com
+address:faridkot,punjab
+country_code:+91
+mobile:991423616
+designation:study
+roomno:55
+gender:Male
+password:123456789
+user_type:U
+auth_key:123</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+    <td class="tg-yw4l">{
+    "result": {
+        "status": "1",
+        "message": "Register Successfully",
+        "id": "9414",
+        "is_verified": "not verified"
+    }
+}</td>
+  </tr>
+</table>
+
+2. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>login</b></th>
+  </tr>
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/login.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">login</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">country_code,mobile,password,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">status,message(Need to verify),id,user_type,user_name
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+    <td class="tg-yw4l">country_code:+91
+		mobile:991423616
+		password:123456789
+		auth_key:123
+	</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+		"result": 
+		{
+			"status": "1",
+			"message": "Need to verify",
+			"id": "9413",
+			"user_type": "U",
+			"user_name": "shaminder"
+		}
+	}
+	</td>
+  </tr>
+</table>
+
+
+3. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>forgot_password</b></th>
+  </tr>
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/forgot_password.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">forgot_password</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">(country_code,mobile) Or (email),auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">status(1/0),message(Password changed,check you mobile inbox)
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			auth_key:123
+			country_code:91
+			mobile:8728855665
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "Password changed,check you mobile inbox"
+    }
+}
+	</td>
+  </tr>
+</table>
+
+4. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>Facebook_Login</b></th>
+  </tr>
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/Facebook_Login.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">Facebook_Login</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">unique_id,name,image,email,gender,age,mobile_no,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">status(1/0),message(success),id,register_type
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			unique_id:1916243001984228
+			name:Paninder Kaur
+			image:468_1504690592.jpeg
+			email:paninder07@gmail.com
+			gender:F
+			age:23
+			mobile_no:8728855665
+			auth_key:123
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "success",
+        "id": "468",
+        "register_type": "F"
+    }
+}
+	</td>
+  </tr>
+</table>
+
+5. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>qrcode_scan</b></th>
+  </tr>
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/qrcode_scan.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">qrcode_scan</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">user_id,qr_code,country_code,mobile,seat_no,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">status,message,id,user_type,login_type
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			user_id:9404
+			qr_code:714820
+			country_code:91
+			mobile:9501436162
+			seat_no:12
+			auth_key:123
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "Mobile No Already verified",
+        "id": "749",
+        "user_type": "U",
+        "login_type": "G"
+    }
+}
+	</td>
+  </tr>
+</table>
+
+6. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>get_groups</b></th>
+  </tr>
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/get_groups.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">get_groups</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">user_id,page_no,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1),message(Successfully),data[for_id,total_badges,group_id,fb_link,group_name,company_name,address,
+                logo, image,type,allow_chat,allow_chat_private,internet_less_chat,admin_id,welcome_message,has_helpdesk,
+                country_code,help_mobile,broadcast_message,broadcast_image,user_type,staff_group]
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			user_id:468
+			page_no:1
+			auth_key:123
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "Successfully.",
+        "data": [
+            {
+                "for_id": "2501",
+                "total_badges": 1,
+                "group_id": "58",
+                "fb_link": "http://facebook.com/CoRover",
+                "group_name": "CoRover Helpdesk",
+                "company_name": "",
+                "address": "Bangalore, Karnataka, India",
+                "logo": "https://corover.co.in/JKtourismdev/img/group_logo/58_1510929258.png",
+                "image": "https://corover.co.in/JKtourismdev/img/group_images/38625a06c04cc97624d7ca1ecd79d341.jpg",
+                "type": "Knowledge Sharing Forum",
+                "allow_chat": "Y",
+                "allow_chat_private": "Y",
+                "internet_less_chat": "Y",
+                "admin_id": "726",
+                "welcome_message": "",
+                "has_helpdesk": "Yes",
+                "country_code": "+91",
+                "help_mobile": null,
+                "broadcast_message": "kjk,j",
+                "broadcast_image": "",
+                "user_type": "U",
+                "staff_group": "N"
+            }}}
+	</td>
+  </tr>
+</table>
+7. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>delete_group</b></th>
+  </tr>
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/delete_group.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">delete_group</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">user_id,group_id,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1),message(Successfully)
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			user_id:9404
+			group_id:68
+			auth_key:123
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "Deleted Successfully."
+    }
+}
+	</td>
+  </tr>
+</table>
+
+8. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>fetch_profile</b></th>
+  </tr>
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/fetch_profile.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">fetch_profile</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">user_id,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1),result[user_id,name,email,country_code,new_countrycode,mobile,new_mobile,gender,age,designation,address,user_type,image]
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			user_id:9404
+			auth_key:123
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "result": {
+            "user_id": "9404",
+            "name": "Shaminder Bhatti",
+            "email": "",
+            "country_code": "91",
+            "new_countrycode": "",
+            "mobile": "",
+            "new_mobile": "",
+            "gender": "M",
+            "age": "0",
+            "designation": "",
+            "address": "",
+            "user_type": "U",
+            "image": "https://graph.facebook.com/1463063523785824/picture?type=large"
+			}
+		}
+	}
+	</td>
+  </tr>
+</table>
+9. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>get_groupdetails</b></th>
+  </tr>
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/get_groupdetails.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">get_groupdetails</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">user_id,group_id,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1/0),message(Successfully),data[group_id,group_name,compnay_name,description,address,logo,qr_code,type,allow_chat,private_chat,group_chat,admin_id,unique_id,seat_no]
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			user_id:9404
+			group_id:58
+			auth_key:123
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "Successfully.",
+        "data": {
+            "group_id": "58",
+            "group_name": "CoRover Helpdesk",
+            "compnay_name": "",
+            "description": "This is the CoRover Helpdesk",
+            "address": "Bangalore, Karnataka, India",
+            "logo": "https://corover.co.in/JKtourismdev/img/group_logo/58_1510929258.png",
+            "qr_code": "https://corover.co.in/JKtourismdev/img/38625a06c04cc97624d7ca1ecd79d341.jpg",
+            "type": "Knowledge Sharing Forum",
+            "allow_chat": "Y",
+            "private_chat": "on",
+            "group_chat": "on",
+            "admin_id": "726",
+            "unique_id": "714820",
+            "seat_no": ""
+        }
+    }
+}
+	</td>
+  </tr>
+</table>
+10. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>verification</b></th>
+  </tr>
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/verification.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">verification</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">user_id,verification_code,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1/0),message(Verified Successfully),user_id
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			user_id:9404
+			verification_code:123456
+			auth_key:123
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "Verified Successfully",
+        "user_id": "9404"
+    }
+}
+	</td>
+  </tr>
+</table>
+
+11. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>update_deviceid</b></th>
+  </tr>
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/update_deviceid.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">update_deviceid</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">user_id,device_id,timezone,bluetooth_mac,auth_key,device_type</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1/0),message(Success),user_id,services[service_name,service_link,phone,service_icon]
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			user_id:9404
+			device_id:abc
+			timezone:Asia/Kolkata
+			bluetooth_mac:5C:51:88:65:C1:75
+			auth_key:123
+			device_type:A
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "Success",
+        "User Id": "9404",
+        "services": [
+            {
+                "service_name": "Local Products",
+                "service_link": "https://www.nativebag.in/jammu-kashmir?nbaff=NB594D06D41C8B9&utm_source=corover&utm_medium=Social&utm_campaign=jkamarnath",
+                "phone": "",
+                "service_icon": "https://corover.co.in/JKtourismdev/img/profile_images/1505055777icon-local-products.png"
+            }}}
+	</td>
+  </tr>
+</table>
+12. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>get_groupstaff</b></th>
+  </tr>
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/get_groupstaff.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">get_groupstaff</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">user_id,page_no,group_id,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1/0),message(Successfully),user_id,name,image,designation,mobile
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			user_id:9404
+			page_no:1
+			group_id:58
+			auth_key:123
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "Successfully.",
+        "data": [
+            {
+                "user_id": "9387",
+                "name": "Service Help2",
+                "image": "https://corover.co.in/JKtourismdev/img/profile_images/9387_1509686531.jpg",
+                "designation": "Tester",
+                "mobile": "9501089847"
+            }]}}
+	</td>
+  </tr>
+</table>
+
+13. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>get_groupusers</b></th>
+  </tr>
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/get_groupusers.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">get_groupusers</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">user_id,page_no,group_id,timezone,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1/0),message(Successfully),user_id,name,address,designation,roomno,date,refrence,image,type,block_status,bluetooth_mac,gender,age,last_chat,check,id,total_badges
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			user_id:9404
+			page_no:1
+			group_id:58
+			timezone:Asia/Kolkata
+			auth_key:123
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "Successfully.",
+        "data": [
+            {
+                "user_id": "541",
+                "name": "CoRover",
+                "address": "Bangalore",
+                "designation": "Founder ",
+                "roomno": "Anku",
+                "date": "18-11-2017",
+                "refrence": "Nick Name",
+                "image": "https://corover.co.in/JKtourismdev/img/profile_images/541_1501532931.jpeg",
+                "type": "U",
+                "block_status": "unblock",
+                "bluetooth_mac": "60:8E:08:4C:41:F5",
+                "gender": "M",
+                "age": "35",
+                "last_chat": 0,
+                "check": "0",
+                "id": 0,
+                "total_badges": "0"
+            }]}}
+	</td>
+  </tr>
+</table>
+14. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>search_group_users</b></th>
+  </tr>
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/search_group_users.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">search_group_users</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">name,page_no,group_id,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1/0),message(Successfully),user_id,name,address,designation,roomno,date,refrence,image,type,block_status,bluetooth_mac,gender,age,user_count,staff_count,totalPages
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			name:shaminder
+			page_no:1
+			group_id:58
+			auth_key:123
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "Successfully.",
+        "data": [
+            {
+                "user_id": "9404",
+                "name": "Shaminder Bhatti",
+                "address": "",
+                "designation": "",
+                "roomno": "",
+                "date": "17-11-2017",
+                "refrence": "Nick Name",
+                "image": "https://graph.facebook.com/1463063523785824/picture?type=large",
+                "type": "U",
+                "block_status": "unblock",
+                "bluetooth_mac": "5C:51:88:65:C1:75",
+                "gender": "M",
+                "age": "0"
+            }
+        ],
+        "user_count": "0",
+        "staff_count": 0,
+        "totalPages": 1
+    }
+}
+	</td>
+  </tr>
+</table>
+15. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>get_services</b></th>
+  </tr>
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/get_services.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">get_services</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">group_id,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1/0),message(No data/data)
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			name:shaminder
+			page_no:1
+			group_id:58
+			auth_key:123
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "Successfully.",
+        "data": [
+            {
+                "user_id": "9404",
+                "name": "Shaminder Bhatti",
+                "address": "",
+                "designation": "",
+                "roomno": "",
+                "date": "17-11-2017",
+                "refrence": "Nick Name",
+                "image": "https://graph.facebook.com/1463063523785824/picture?type=large",
+                "type": "U",
+                "block_status": "unblock",
+                "bluetooth_mac": "5C:51:88:65:C1:75",
+                "gender": "M",
+                "age": "0"
+            }
+        ],
+        "user_count": "0",
+        "staff_count": 0,
+        "totalPages": 1
+    }
+}
+	</td>
+  </tr>
+</table>
+16. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>chat</br>send private message api (Method name : chat) user controller</b></th>
+	
+  </tr>
+  
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/chat.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">chat</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">sender_id,receiver_id,group_id,type,message,lat,lng,image,timezone,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1/0),message(No data/data)
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			name:shaminder
+			page_no:1
+			group_id:58
+			auth_key:123
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "Successfully.",
+        "data": [
+            {
+                "user_id": "9404",
+                "name": "Shaminder Bhatti",
+                "address": "",
+                "designation": "",
+                "roomno": "",
+                "date": "17-11-2017",
+                "refrence": "Nick Name",
+                "image": "https://graph.facebook.com/1463063523785824/picture?type=large",
+                "type": "U",
+                "block_status": "unblock",
+                "bluetooth_mac": "5C:51:88:65:C1:75",
+                "gender": "M",
+                "age": "0"
+            }
+        ],
+        "user_count": "0",
+        "staff_count": 0,
+        "totalPages": 1
+    }
+}
+	</td>
+  </tr>
+</table>
+
+17. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>chat</br>send helpdesk message api (Method name : chat) chat controller</b></th>
+	
+  </tr>
+  
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">https://corover.co.in/JKtourismdev/Chats/chat.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">chat</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">sender_id,receiver_id,group_id,type,message,lat,lng,timezone,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1/0),message(Successfully Sent),groupmsg_img,last_id{SupportChat{receiver_id,sender_id,id,message,type,group_id,taken_by,is_taken,submit_time,is_closed,is_read,date}Sender{id,name,image}Receiver{id,name,image}Group{id,name}}
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			sender_id:9404
+			group_id:58
+			type:T
+			message:lunch time
+			lng:
+			lat:
+			auth_key:123
+			receiver_id:9403
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "Successfully Sent",
+        "groupmsg_img": "",
+        "last_id": {
+            "SupportChat": {
+                "receiver_id": "9403",
+                "sender_id": "9404",
+                "id": "2796",
+                "message": "lunch time",
+                "type": "T",
+                "group_id": "58",
+                "taken_by": "0",
+                "is_taken": "No",
+                "submit_time": "2017-11-29 09:57:03",
+                "is_closed": "No",
+                "is_read": "No",
+                "date": "Nov 29, 2017, 9:52 am"
+            },
+            "Sender": {
+                "id": "9404",
+                "name": "Shaminder Bhatti",
+                "image": "https://graph.facebook.com/1463063523785824/picture?type=large"
+            },
+            "Receiver": {
+                "id": "9403",
+                "name": "Heena",
+                "image": "731_1510720462.jpg"
+            },
+            "Group": {
+                "id": "58",
+                "name": "CoRover Helpdesk"
+            }
+        }
+    }
+}
+	</td>
+  </tr>
+</table>
+
+18. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>get_chat</br>Get private messages api (Method name : get_chat ) user controller</b></th>
+	
+  </tr>
+  
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/get_chat.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">get_chat</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">sender_id,receiver_id,group_id,timezone,page_number,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1/0),message(Successfully),data[msg_id,senderid,senderimage,sendername,msg,type,image,lat,lng,date,time],totalPages
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			sender_id:9404
+			reciever_id:9403
+			group_id:58
+			timezone:Asia/Kolkata
+			page_number:1
+			auth_key:123
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+		"result": 
+		{
+			"status": "1",
+			"message": "successfully.",
+			"data": [
+				{
+					"msg_id": "397",
+					"senderid": "9404",
+					"senderimage": "https://graph.facebook.com/1463063523785824/picture?type=large",
+					"sendername": "Shaminder Bhatti",
+					"msg": "hi",
+					"type": "T",
+					"image": "",
+					"lat": "",
+					"lng": "",
+					"date": "2017-11-28",
+					"time": "05:50 PM"
+				}
+			],
+			"totalPages": 1
+		}
+	}
+	</td>
+  </tr>
+</table>
+19. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>get_chat</br>Get helpdesk messages api (Method name : get_chat ) chat controller</b></th>
+	
+  </tr>
+  
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">https://corover.co.in/JKtourismdev/Chats/get_chat.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">get_chat</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">sender_id,receiver_id,group_id,timezone,page_number,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1/0),message(Successfully),data[msg_id,senderid,senderimage,sendername,msg,type,image,lat,lng,date,time,close_time,is_closed],totalPages
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			sender_id:9387
+			timezone:Asia/kolkata
+			page_number:1
+			group_id:62
+			auth_key:123
+			reciever_id:486
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "successfully.",
+        "data": [
+            {
+                "msg_id": "1757",
+                "senderid": "9387",
+                "senderimage": "https://corover.co.in/JKtourismdev/img/profile_images/9387_1509686531.jpg",
+                "sendername": "Service Help2",
+                "msg": "fff",
+                "type": "T",
+                "image": "",
+                "lat": "",
+                "lng": "",
+                "date": "2017-11-22",
+                "time": "04:49 PM",
+                "close_time": "",
+                "is_closed": "No"
+            }]}}
+	</td>
+  </tr>
+</table>
+
+20. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>send_message</br>Send group message api ( Method name : send_message ) user controller</b></th>
+	
+  </tr>
+  
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/send_message.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">send_message</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">user_id,group_id,type,message,lat,lng,image,timezone,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1/0),message(Successfully Sent),groupmsg_img
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			user_id:9404
+			group_id:58
+			type:T
+			message:Hello
+			lat:
+			lng:
+			auth_key:123
+			timezone:Asia/Tokyo
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "Successfully Sent",
+        "groupmsg_img": ""
+    }
+}
+	</td>
+  </tr>
+</table>
+21. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>get_chat</br>Get group messages api (Method name : get_chat ) user controller</b></th>
+	
+  </tr>
+  
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/get_chat.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">get_chat</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">user_id,group_id,timezone,page_number,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1/0),message(Successfully Sent),data[msg_id,senderid,senderimage,sendername,msg,type,image,lat,lng,date,time],totalPages
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			sender_id:9404
+			reciever_id:9403
+			group_id:58
+			timezone:Asia/Kolkata
+			page_number:1
+			auth_key:123
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "successfully.",
+        "data": [
+            {
+                "msg_id": "397",
+                "senderid": "9404",
+                "senderimage": "https://graph.facebook.com/1463063523785824/picture?type=large",
+                "sendername": "Shaminder Bhatti",
+                "msg": "hi",
+                "type": "T",
+                "image": "",
+                "lat": "",
+                "lng": "",
+                "date": "2017-11-28",
+                "time": "05:50 PM"
+            }
+        ],
+        "totalPages": 1
+    }
+}
+	</td>
+  </tr>
+</table>
+22. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>block</br>Block user api (Method name : block ) user controller</b></th>
+	
+  </tr>
+  
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/block.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">block</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">user_id,group_id,friend_id,reason,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1/0),message(Successfully )
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			user_id:9404
+			group_id:58
+			friend_id:468
+			reason:Other issue
+			auth_key:123
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Result Screenshot</td>
+		<td class="tg-yw4l"><a href="file:///E:/Shaminder/Vll%20Projects/j%20&%20k/jk%20API%20list/images/1.jpg">Result Screenshot</a>
+			
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "successfully."
+    }
+}
+	</td>
+  </tr>
+</table>
+23. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>new_broadcast</br>Get broadcast message api (Method name : new_broadcast ) user controller</b></th>
+	
+  </tr>
+  
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/new_broadcast.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">new_broadcast</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">user_id,group_id,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1/0),message(Successfully),image,message
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			user_id:9404
+			group_id:58
+			auth_key:123
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Result Screenshot</td>
+		<td class="tg-yw4l"><a href="file:///E:/Shaminder/Vll%20Projects/j%20&%20k/jk%20API%20list/images/1.jpg">Result Screenshot</a>
+			
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+		"result": 
+		{
+			"status": "1",
+			"message": "Succesfully",
+			"result": 
+			{
+				"image": "",
+				"message": "kjk,j"
+			}
+		}
+	}
+	</td>
+  </tr>
+</table>
+24. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>change_password</br>Change password api (Method name : change_password ) user controller</b></th>
+	
+  </tr>
+  
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/change_password.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">change_password</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">user_id,old_password,password,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1/0),message(Password changed successfully)
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			user_id:456
+			old_password:986139
+			password:95014
+			auth_key:123
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Result Screenshot</td>
+		<td class="tg-yw4l"><a href="file:///E:/Shaminder/Vll%20Projects/j%20&%20k/jk%20API%20list/images/1.jpg">Result Screenshot</a>
+			
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "Password changed successfully"
+    }
+}
+	</td>
+  </tr>
+</table>
+25. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>chat_on_off</br>Chat On/Off api (Method name : chat_on_off ) user controller</b></th>
+	
+  </tr>
+  
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/chat_on_off.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">chat_on_off</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">user_id,group_id,group_chat,private_chat,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status,message
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			user_id:456
+			group_id:58
+			group_chat:on
+			private_chat:1
+			auth_key:123
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Result Screenshot</td>
+		<td class="tg-yw4l"><a href="file:///E:/Shaminder/Vll%20Projects/j%20&%20k/jk%20API%20list/images/1.jpg">Result Screenshot</a>
+			
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "successfully"
+    }
+}
+	</td>
+  </tr>
+</table>
+26. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>closechat</br>Chat session end api (Method name : closechat ) chat controller</b></th>
+	
+  </tr>
+  
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">https://corover.co.in/JKtourismdev/Chats/closechat.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">closechat</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">user_id,group_id,timezone,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1/0),message(Chat Closed!),session_id
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			user_id:9404
+			group_id:58
+			timezone:Asia/Kolkata
+			auth_key:123
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Result Screenshot</td>
+		<td class="tg-yw4l"><a href="file:///E:/Shaminder/Vll%20Projects/j%20&%20k/jk%20API%20list/images/1.jpg">Result Screenshot</a>
+			
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+		"result": 
+		{
+			"status": "1",
+			"message": "Chat Closed!",
+			"session_id": "2017112905520758"
+		}
+	}
+	</td>
+  </tr>
+</table>
+27. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>clearHomepageBadges</br>Clear group badges api (Method name : clearHomepageBadges ) user controller</b></th>
+	
+  </tr>
+  
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/clearHomepageBadges.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">clearHomepageBadges</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">user_id,group_id,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1/0),message(Successfully)
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			user_id:9404
+			group_id:58
+			auth_key:123
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Result Screenshot</td>
+		<td class="tg-yw4l"><a href="file:///E:/Shaminder/Vll%20Projects/j%20&%20k/jk%20API%20list/images/1.jpg">Result Screenshot</a>
+			
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "Successfully"
+    }
+}
+	</td>
+  </tr>
+</table>
+
+
+28. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>clearPrivate</br>Clear group badges api (Method name : clearHomepageBadges ) user controller</b></th>
+	
+  </tr>
+  
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/clearPrivate.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">clearPrivate</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">user_id,group_id,sender_id,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1/0),message(Successfully)
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			user_id:9404
+			group_id:58
+			sender_id:9403
+			auth_key:123
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Result Screenshot</td>
+		<td class="tg-yw4l"><a href="file:///E:/Shaminder/Vll%20Projects/j%20&%20k/jk%20API%20list/images/1.jpg">Result Screenshot</a>
+			
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "Successfully"
+    }
+}
+	</td>
+  </tr>
+</table>
+29. <table class="tg">
+  <tr>
+    <th class="tg-031e table_width">API NAME</th>
+    <th class="tg-yw4l abc"><b>edit_profile</br>Edit profile api (Method name : edit_profile ) user controller</b></th>
+	
+  </tr>
+  
+  <tr>
+    <td class="tg-031e">LINK</td>
+    <td class="tg-yw4l">http://54.152.0.90/api/edit_profile.json </td>
+  </tr>
+  <tr>
+    <td class="tg-031e">METHOD NAME</td>
+    <td class="tg-yw4l">edit_profile</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">KEY'S FILEDS</td>
+    <td class="tg-yw4l">user_id,name,address,country_code,mobile,designation,gender,age,image,auth_key</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OUTPUT</td>
+    <td class="tg-yw4l">    
+        status(1/0),message(Updated Successfully),is_verified
+            
+</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bulk Value</td>
+		<td class="tg-yw4l">
+			user_id:9404
+			name:shaminder
+			address:mohali
+			country_code:91
+			mobile:9501436163
+			designation:student
+			gender:M
+			age:25
+			auth_key:123
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Result Screenshot</td>
+		<td class="tg-yw4l"><a href="file:///E:/Shaminder/Vll%20Projects/j%20&%20k/jk%20API%20list/images/1.jpg">Result Screenshot</a>
+			
+		</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">EXAMPLE</td>
+	<td class="tg-yw4l">
+	{
+    "result": {
+        "status": "1",
+        "message": "Updated successfully",
+        "is_verified": "not verified"
+    }
+}
+	</td>
+  </tr>
+</table>

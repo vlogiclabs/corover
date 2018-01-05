@@ -1,0 +1,17 @@
+Name of project- 
+Domain- iPhone 
+Target Audience- 
+Client Requirements : Web admin / database / local database / iOS / Android
+
+Basic functionality- Description of basic functionality
+ 
+
+Functionality-
+
+1) 
+2) 
+3) 
+.
+.
+
+
